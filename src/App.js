@@ -1,9 +1,8 @@
 import './styles/style.css'
-import './components/Calendar'
 import Calendar from './components/Calendar';
-import Datepicker from 'vanillajs-datepicker/Datepicker';
 
-function App() {
+
+function App(start, end) {
 
   return (
     <>
@@ -15,10 +14,17 @@ function App() {
           <div className='information-box orange'></div><p>Ödeme Bekliyor</p>
           <div className='information-box red'></div><p>Giriş-Çıkış</p>
         </div >
+        <button>1</button>
+        <button type="button">3</button>
+        <button type="button">6</button>
+        <button type="button">12</button>
       </div>
-      <div id="foo" data-date="01/25/2020">
-        <Datepicker />
+
+      <div className='calendar-area'>
+
+        <Calendar />
       </div>
+      {/* <div>Seçili tarihler {start ? start : "seçili değil"} - {end ? end : "seçili değil"}</div> */}
     </>
 
   );
